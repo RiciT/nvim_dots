@@ -36,3 +36,25 @@ vim.o.conceallevel = 2
 --vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
 --vim.wo[0][0].foldmethod = "expr"
 vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+vim.o.undofile = true
+vim.o.breakindent = true
+
+vim.o.splitbelow = true
+vim.o.splitright = true
+
+vim.o.scrolloff = 12
+
+vim.diagnostic.config({
+	update_in_insert = false,
+	severity_sort = true,
+	float = { border = "rounded", source = "if_many" },
+	underline = { severity = { min = vim.diagnostic.severity.WARN } },
+
+	-- Can switch between these as you prefer
+	virtual_text = true, -- Text shows up at the end of the line
+	virtual_lines = false, -- Text shows up underneath the line, with virtual lines
+
+	-- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
+	jump = { float = true },
+})

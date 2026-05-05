@@ -3,6 +3,7 @@
 local map = vim.keymap.set
 
 map("t", "<Esc>", "<C-\\><C-n>")
+map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Map <A-j>, <A-k>, <A-h>, <A-l> to navigate between windows in any modes
 map({ "n" }, "<C-m>", "<C-w>h")
@@ -10,23 +11,27 @@ map({ "n" }, "<C-n>", "<C-w>j")
 map({ "n" }, "<C-e>", "<C-w>k")
 map({ "n" }, "<C-i>", "<C-w>l")
 
+-- Resize window using <ctrl> arrow keys
+map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+map("n", "<C-Left>", "<cmd>vertical resize +2<cr>", { desc = "Decrease Window Width" })
+map("n", "<C-Right>", "<cmd>vertical resize -2<cr>", { desc = "Increase Window Width" })
+
 -- This part is the accomodate colemak-dh
+-- dont skip over wrapped lines when jumping lines
 local modes = { "n", "v", "o" }
 
 map(modes, "m", "h")
 map(modes, "j", "m")
 
-map(modes, "n", "j")
+map(modes, "n", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 map(modes, "h", "n")
 
-map(modes, "e", "k")
+map(modes, "e", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
 map(modes, "k", "e")
 
 map(modes, "i", "l")
 map(modes, "l", "i")
-
--- clear search highlights on esc
-map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
 -- move selection up and down
 map("v", "E", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })

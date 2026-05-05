@@ -26,7 +26,7 @@ require("dashboard").setup({
 				desc = "Find File",
 				key = "f",
 				key_format = " %s",
-				action = "Telescope find_files",
+				action = "FzfLua files",
 			},
 			{
 				icon = " ",
@@ -40,7 +40,7 @@ require("dashboard").setup({
 				desc = "Config",
 				key = "c",
 				key_format = " %s",
-				action = ":Telescope find_files cwd=/home/br4mos/.config/nvim/",
+				action = "Telescope find_files cwd=/home/br4mos/.config/nvim/",
 			},
 			{
 				icon = "󰰏 ",
@@ -54,12 +54,12 @@ require("dashboard").setup({
 				desc = "Quit",
 				key = "q",
 				key_format = " %s",
-				action = "q",
+				action = "qa",
 			},
 		},
 		footer = {
 			"",
-			"⚡ Neovim loaded "
+			"⚡Neovim loaded "
 				.. tostring(get_loaded_plugins_count())
 				.. "/"
 				.. tostring(_G.TotalPluginCount or 0)
