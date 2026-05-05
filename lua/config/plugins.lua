@@ -1,12 +1,11 @@
 -- PLUGINS
-
 _G.TotalPluginCount = 0
 local function add_package(pack)
 	_G.TotalPluginCount = _G.TotalPluginCount + 1
 	vim.pack.add({ "https://github.com/" .. pack })
 end
 
--- TODO: will need to add some keymap configs for lsps, trouble, markdown-rendering, also for nvim-surround some help
+-- TODO: will need to add some keymap configs for lsps
 
 ----------------------------------------------
 -- Quickstart configs for LSP
@@ -109,6 +108,7 @@ add_package("stevearc/conform.nvim")
 ----------------------------------------------
 -- Diagnostics list
 add_package("folke/trouble.nvim")
+require("trouble").setup({})
 ----------------------------------------------
 -- Markdown rendering
 add_package("MeanderingProgrammer/render-markdown.nvim")
@@ -120,7 +120,6 @@ require("lualine").setup({})
 ----------------------------------------------
 -- LazyGit integration
 add_package("kdheepak/lazygit.nvim")
-vim.keymap.set({ "n", "v", "o" }, "<leader>g", ":LazyGit<CR>")
 ----------------------------------------------
 -- Debugging (DAP)
 add_package("mfussenegger/nvim-dap")
@@ -128,9 +127,11 @@ add_package("rcarriga/nvim-dap-ui")
 -- deps
 add_package("nvim-neotest/nvim-nio")
 add_package("jay-babu/mason-nvim-dap.nvim") -- bridges Mason with DAP
+-- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Quick scratchpad terminal for compiling
 add_package("akinsho/toggleterm.nvim")
+-- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Neovim Lua Development
 add_package("folke/lazydev.nvim")

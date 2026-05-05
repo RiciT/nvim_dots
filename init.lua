@@ -18,3 +18,13 @@ if vim.fn.isdirectory(plugins_dir) == 1 then
 		end
 	end
 end
+-- automatically import every lua file in the config dir
+local plugins_dir = vim.fn.stdpath("config") .. "/lua/after/queries"
+if vim.fn.isdirectory(plugins_dir) == 1 then
+	for name, type in vim.fs.dir(plugins_dir) do
+		if type == "file" and name:match("%.lua$") then
+			local module = name:gsub("%.lua$", "")
+			require("config." .. module)
+		end
+	end
+end

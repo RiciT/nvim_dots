@@ -29,3 +29,6 @@ vim.o.confirm = true
 vim.g.have_nerd_font = true
 
 vim.opt.termguicolors = true
+
+-- enable concealing for markdown rendering
+vim.o.conceallevel = 2

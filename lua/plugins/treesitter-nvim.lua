@@ -2,7 +2,7 @@ require("nvim-treesitter").install({
 	"bash",
 	"regex",
 	"markdown",
-	"markdown-inline",
+	"markdown_inline",
 	"html",
 	"latex",
 	"rust",
@@ -28,5 +28,8 @@ require("nvim-treesitter").install({
 	"toml",
 	"vim",
 	"yaml",
+	"vim",
+	"vimdoc",
+	"query",
 	"zsh",
 })
