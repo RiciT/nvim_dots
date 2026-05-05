@@ -104,17 +104,3 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 	end,
 })
-
--- to make markdown injections work properly
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "lua",
-	callback = function()
-		vim.opt_local.conceallevel = 2
-		local injection_query = [[
-            ;; extends
-            ((comment) @injection.content
-             (#set! injection.language "markdown_inline"))
-        ]]
-		pcall(vim.treesitter.query.set, "lua", "injections", injection_query)
-	end,
-})

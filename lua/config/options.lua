@@ -33,6 +33,6 @@ vim.opt.termguicolors = true
 -- enable concealing for markdown rendering
 vim.o.conceallevel = 2
 
-vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.wo[0][0].foldmethod = "expr"
+--vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+--vim.wo[0][0].foldmethod = "expr"
 vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"

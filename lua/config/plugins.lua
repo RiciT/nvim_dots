@@ -1,5 +1,4 @@
 -- PLUGINS
---- $\beta$
 _G.TotalPluginCount = 0
 local function add_package(pack)
 	_G.TotalPluginCount = _G.TotalPluginCount + 1
