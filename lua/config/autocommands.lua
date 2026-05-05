@@ -60,9 +60,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		vim.treesitter.start()
 	end,
-	-- vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()',
-	-- vim.wo[0][0].foldmethod = 'expr',
-	-- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()",
 })
 
 -- autowrap in tex files
@@ -105,5 +102,19 @@ vim.api.nvim_create_autocmd("FileType", {
 		else
 			vim.notify("(Aborted): Buffer is not empty, skipping template.", vim.log.levels.WARN)
 		end
+	end,
+})
+
+-- to make markdown injections work properly
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "lua",
+	callback = function()
+		vim.opt_local.conceallevel = 2
+		local injection_query = [[
+            ;; extends
+            ((comment) @injection.content
+             (#set! injection.language "markdown_inline"))
+        ]]
+		pcall(vim.treesitter.query.set, "lua", "injections", injection_query)
 	end,
 })
