@@ -7,6 +7,7 @@ vim.g.localleader = "\\"
 -- OPTIONS
 vim.o.number = true
 vim.o.relativenumber = true
+vim.opt.hlsearch = true
 
 -- at UIEnter so it doesnt slow startup
 vim.api.nvim_create_autocmd("UIEnter", {

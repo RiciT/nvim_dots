@@ -60,6 +60,6 @@ wk.add({
 	{ "<leader>t", "<cmd>ToggleTerm direction=horizontal dir=$CWD<CR>", desc = "Split Terminal", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>s", group = "Search (FzfLua)", icon = " " },
-	{ "<leader>sh", "<cmd>FzfLua files cwd=~<CR>", desc = "Find files in ~", icon = "~" },
+	{ "<leader>sh", "<cmd>FzfLua files cwd=~<CR>", desc = "Find files in ~", icon = " " },
 	{ "<leader>sf", "<cmd>FzfLua files cwd=$CWD<CR>", desc = "Find files in CWD", icon = "󰜐 " },
 })

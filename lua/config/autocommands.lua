@@ -1,8 +1,5 @@
 -- AUTOCOMMANDS
 
--- automatically disable search highlighting when going into insert mode of after 'updatetime'
-vim.cmd("packadd! nohlsearch")
-
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	callback = function()
@@ -104,4 +101,3 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 	end,
 })
-

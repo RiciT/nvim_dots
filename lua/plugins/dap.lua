@@ -4,6 +4,7 @@ local dapui = require("dapui")
 dapui.setup()
 require("mason-nvim-dap").setup({
 	automatic_installation = true,
+	ensure_installed = {},
 	handlers = {}, -- this automatically handles DAPs installed via Mason
 })
 

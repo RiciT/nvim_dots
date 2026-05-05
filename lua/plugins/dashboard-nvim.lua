@@ -36,6 +36,24 @@ require("dashboard").setup({
 				action = "Telescope oldfiles",
 			},
 			{
+				icon = "󰒮 ",
+				desc = "Open Last Session",
+				key = "l",
+				key_format = " %s",
+				action = function()
+					require("persistence").load({ last = true })
+				end,
+			},
+			{
+				icon = " ",
+				desc = "Choose Session to Open",
+				key = "s",
+				key_format = " %s",
+				action = function()
+					require("persistence").select()
+				end,
+			},
+			{
 				icon = " ",
 				desc = "Config",
 				key = "c",

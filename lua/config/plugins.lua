@@ -137,6 +137,15 @@ add_package("akinsho/toggleterm.nvim")
 add_package("folke/lazydev.nvim")
 require("lazydev").setup({})
 ----------------------------------------------
+add_package("folke/persistence.nvim")
+require("persistence").setup({
+	dir = vim.fn.stdpath("state") .. "/sessions/", -- directory where session files are saved
+	-- minimum number of file buffers that need to be open to save
+	-- Set to 0 to always save
+	need = 1,
+	branch = true, -- use git branch to save session
+})
+----------------------------------------------
 -- QoL Plugins
 add_package("windwp/nvim-autopairs")
 add_package("kylechui/nvim-surround")
