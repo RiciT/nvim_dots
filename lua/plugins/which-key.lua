@@ -7,7 +7,7 @@ wk.setup({
 wk.add({
 	{ "<localleader>l", group = "LaTeX", icon = "󰗊" },
 	-------------------------------------------------------------
-	{ "<leader>g", desc = "LazyGit", icon = " " },
+	{ "<leader>g", "<cmd>LazyGitCurrentFile<CR>", desc = "LazyGit", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>f", group = "TODO", icon = " " },
 	{ "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Find Todo comments", icon = "📝" },
