@@ -54,6 +54,15 @@ require("dashboard").setup({
 				end,
 			},
 			{
+				icon = " ",
+				desc = "Projects",
+				key = "p",
+				key_format = " %s",
+				action = function()
+					require("telescope").extensions.projects.projects({})
+				end,
+			},
+			{
 				icon = " ",
 				desc = "Config",
 				key = "c",

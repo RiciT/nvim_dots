@@ -156,3 +156,4 @@ add_package("kosayoda/nvim-lightbulb")
 require("nvim-lightbulb").setup({
 	autocmd = { enabled = true },
 })
+add_package("ahmedkhalf/project.nvim")
