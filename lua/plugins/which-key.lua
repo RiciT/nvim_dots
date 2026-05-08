@@ -57,7 +57,12 @@ wk.add({
 	{ "<leader>qs", "<cmd>lua vim.diagnostic.show<CR>", desc = "[S]how diagnostics", icon = "󰈈 " },
 	{ "<leader>qh", "<cmd>lua vim.diagnostic.hide<CR>", desc = "[H]ide diagnostics", icon = "󰈉 " },
 	-------------------------------------------------------------
-	{ "<leader>t", "<cmd>ToggleTerm direction=horizontal dir=$CWD<CR>", desc = "Split Terminal", icon = " " },
+	{
+		"<leader>t",
+		"<cmd>ToggleTerm direction=horizontal dir=%:p:h<CR>",
+		desc = "Split Terminal",
+		icon = " ",
+	},
 	-------------------------------------------------------------
 	{ "<leader>s", group = "Search (FzfLua)", icon = " " },
 	{ "<leader>sh", "<cmd>FzfLua files cwd=~<CR>", desc = "Find files in ~", icon = " " },
