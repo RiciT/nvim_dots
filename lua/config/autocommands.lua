@@ -53,6 +53,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"vim",
 		"yaml",
 		"zsh",
+		"zig",
 	},
 	callback = function()
 		vim.treesitter.start()

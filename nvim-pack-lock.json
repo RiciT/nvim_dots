@@ -56,6 +56,10 @@
       "rev": "a04ad0dbc725134edbee3a5eea29290976695357",
       "src": "https://github.com/kdheepak/lazygit.nvim"
     },
+    "lean.nvim": {
+      "rev": "75b7822d565054606af84fa61771eb0030e2ceec",
+      "src": "https://github.com/julian/lean.nvim"
+    },
     "lualine.nvim": {
       "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
       "src": "https://github.com/nvim-lualine/lualine.nvim"

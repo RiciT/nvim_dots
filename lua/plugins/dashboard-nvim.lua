@@ -86,11 +86,7 @@ require("dashboard").setup({
 		},
 		footer = {
 			"",
-			"⚡Neovim loaded "
-				.. tostring(get_loaded_plugins_count())
-				.. "/"
-				.. tostring(_G.TotalPluginCount or 0)
-				.. " plugins",
+			"⚡Neovim loaded " .. tostring(get_loaded_plugins_count()) .. " plugins",
 		},
 		vertical_center = true,
 	},

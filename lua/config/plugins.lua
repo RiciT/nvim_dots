@@ -146,6 +146,10 @@ require("persistence").setup({
 	branch = true, -- use git branch to save session
 })
 ----------------------------------------------
+-- Lean support
+add_package("julian/lean.nvim")
+require("lean").setup({ mappings = true })
+----------------------------------------------
 -- QoL Plugins
 add_package("windwp/nvim-autopairs")
 add_package("kylechui/nvim-surround")

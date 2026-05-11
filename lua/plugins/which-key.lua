@@ -13,9 +13,10 @@ wk.add({
 	{ "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Find Todo comments", icon = "📝" },
 	{ "<leader>fb", "<cmd>TodoQuickFix<CR>", desc = "Trouble Todo list", icon = " " },
 	-------------------------------------------------------------
-	{ "<leader>e", group = "NeoTree", icon = "󱘎 " },
-	{ "<leader>eg", "<cmd>Neotree filesystem toggle left<CR>", desc = "Toggle global NeoTree", icon = " " },
-	{ "<leader>ee", "<cmd>Neotree reveal_force_cwd toggle left<CR>", desc = "Toggle CWD NeoTree", icon = " " },
+	{ "<leader>e", "<cmd>Neotree reveal_force_cwd toggle left<CR>", desc = "Toggle CWD NeoTree", icon = " " },
+	--{ "<leader>e", group = "NeoTree", icon = "󱘎 " },
+	--{ "<leader>eg", "<cmd>Neotree filesystem toggle left<CR>", desc = "Toggle global NeoTree", icon = " " },
+	--{ "<leader>ee", "<cmd>Neotree reveal_force_cwd toggle left<CR>", desc = "Toggle CWD NeoTree", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>k", group = "Telescope", icon = " " },
 	{ "<leader>kr", "<cmd>Telescope oldfiles<CR>", desc = "Recent files", icon = "󰑌 " },

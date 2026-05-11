@@ -32,4 +32,5 @@ require("nvim-treesitter").install({
 	"vimdoc",
 	"query",
 	"zsh",
+	"zig",
 })
