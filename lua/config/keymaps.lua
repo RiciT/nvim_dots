@@ -33,6 +33,9 @@ map(modes, "k", "e")
 map(modes, "i", "l")
 map(modes, "l", "i")
 
+-- Fix going backwards through search
+map(modes, "H", "N")
+
 -- move selection up and down
 map("v", "E", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 map("v", "N", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
