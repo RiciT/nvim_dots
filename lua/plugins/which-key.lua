@@ -64,6 +64,12 @@ wk.add({
 		desc = "Split Terminal",
 		icon = " ",
 	},
+	{
+		"<leader>p",
+		"<cmd>vsplit<CR><cmd>terminal<CR>",
+		desc = "Open Split Terminal",
+		icon = " ",
+	},
 	-------------------------------------------------------------
 	{ "<leader>s", group = "Search (FzfLua)", icon = " " },
 	{ "<leader>sh", "<cmd>FzfLua files cwd=~<CR>", desc = "Find files in ~", icon = " " },

@@ -33,4 +33,6 @@ require("nvim-treesitter").install({
 	"query",
 	"zsh",
 	"zig",
+	"javascript",
+	"typescript",
 })

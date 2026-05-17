@@ -74,7 +74,7 @@ add_package("MunifTanjim/nui.nvim")
 -- opt deps
 add_package("antosha417/nvim-lsp-file-operations")
 add_package("s1n7ax/nvim-window-picker")
-add_package("3rd/image.nvim")
+--add_package("3rd/image.nvim") only in kitty since terminator cant render images
 -- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Better Completion engine
@@ -156,8 +156,4 @@ add_package("kylechui/nvim-surround")
 require("nvim-surround").setup({})
 add_package("folke/todo-comments.nvim")
 require("todo-comments").setup({})
-add_package("kosayoda/nvim-lightbulb")
-require("nvim-lightbulb").setup({
-	autocmd = { enabled = true },
-})
 add_package("ahmedkhalf/project.nvim")

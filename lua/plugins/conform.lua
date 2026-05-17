@@ -23,14 +23,14 @@ conform.setup({
 		r = { "jupytext" },
 
 		-- Web, Markup & Data
-		javascript = { { "prettierd", "prettier" } },
-		typescript = { { "prettierd", "prettier" } },
-		css = { { "prettierd", "prettier" } },
-		json = { { "prettierd", "prettier" } },
-		markdown = { { "prettierd", "prettier" } },
+		javascript = { "prettierd" },
+		typescript = { "ts-standard", "rustywind", "prettierd" },
+		css = { "prettierd" },
+		json = { "prettierd" },
+		markdown = { "prettierd" },
 
 		-- HTML includes rustywind
-		html = { "rustywind", { "prettierd", "prettier" } },
+		html = { "rustywind", "prettierd" },
 
 		-- Fallback
 		["_"] = { "trim_whitespace" },
