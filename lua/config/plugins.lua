@@ -4,9 +4,6 @@ local function add_package(pack)
 	_G.TotalPluginCount = _G.TotalPluginCount + 1
 	vim.pack.add({ "https://github.com/" .. pack })
 end
-
--- TODO: will need to add some keymap configs for lsps
-
 ----------------------------------------------
 -- Quickstart configs for LSP
 add_package("neovim/nvim-lspconfig")
@@ -27,17 +24,14 @@ require("gitsigns").setup({})
 ----------------------------------------------
 -- Advanced search highlighting
 add_package("folke/flash.nvim")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Treesitter
 add_package("nvim-treesitter/nvim-treesitter")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Dashboard
 add_package("nvimdev/dashboard-nvim")
 -- Coloured icons dep for quite a few things
 add_package("nvim-tree/nvim-web-devicons")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Telescope
 add_package("nvim-telescope/telescope.nvim")
@@ -45,15 +39,12 @@ add_package("nvim-telescope/telescope.nvim")
 add_package("nvim-lua/plenary.nvim")
 -- opt deps
 add_package("nvim-telescope/telescope-fzf-native.nvim")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- VimTeX
 add_package("lervag/vimtex")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Pywal colorscheme
 add_package("AlphaTechnolog/pywal.nvim")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Which-key
 add_package("folke/which-key.nvim")
@@ -61,7 +52,6 @@ add_package("nvim-mini/mini.icons")
 ----------------------------------------------
 -- Buffer manager - (plenary also a dep here)
 add_package("j-morano/buffer_manager.nvim")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Bufferline
 add_package("akinsho/bufferline.nvim")
@@ -75,7 +65,6 @@ add_package("MunifTanjim/nui.nvim")
 add_package("antosha417/nvim-lsp-file-operations")
 add_package("s1n7ax/nvim-window-picker")
 --add_package("3rd/image.nvim") only in kitty since terminator cant render images
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Better Completion engine
 -- need this autocommand here sadly
@@ -100,11 +89,9 @@ add_package("rafamadriz/friendly-snippets")
 add_package("folke/noice.nvim")
 -- deps
 add_package("rcarriga/nvim-notify")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Formatter
 add_package("stevearc/conform.nvim")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Diagnostics list
 add_package("folke/trouble.nvim")
@@ -112,7 +99,6 @@ require("trouble").setup({})
 ----------------------------------------------
 -- Markdown rendering
 add_package("MeanderingProgrammer/render-markdown.nvim")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Status line
 add_package("nvim-lualine/lualine.nvim")
@@ -127,11 +113,9 @@ add_package("rcarriga/nvim-dap-ui")
 -- deps
 add_package("nvim-neotest/nvim-nio")
 add_package("jay-babu/mason-nvim-dap.nvim") -- bridges Mason with DAP
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Quick scratchpad terminal for compiling
 add_package("akinsho/toggleterm.nvim")
--- (SETUP)CONFIG IN SEPARATE FILE
 ----------------------------------------------
 -- Neovim Lua Development
 add_package("folke/lazydev.nvim")
