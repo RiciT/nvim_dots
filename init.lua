@@ -18,5 +18,3 @@ if vim.fn.isdirectory(plugins_dir) == 1 then
 		end
 	end
 end
-
--- change
