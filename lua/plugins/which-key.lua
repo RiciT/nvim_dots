@@ -14,9 +14,6 @@ wk.add({
 	{ "<leader>fb", "<cmd>TodoQuickFix<CR>", desc = "Trouble Todo list", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>e", "<cmd>Neotree reveal_force_cwd toggle left<CR>", desc = "Toggle CWD NeoTree", icon = " " },
-	--{ "<leader>e", group = "NeoTree", icon = "󱘎 " },
-	--{ "<leader>eg", "<cmd>Neotree filesystem toggle left<CR>", desc = "Toggle global NeoTree", icon = " " },
-	--{ "<leader>ee", "<cmd>Neotree reveal_force_cwd toggle left<CR>", desc = "Toggle CWD NeoTree", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>k", group = "Telescope", icon = " " },
 	{ "<leader>kr", "<cmd>Telescope oldfiles<CR>", desc = "Recent files", icon = "󰑌 " },
@@ -42,21 +39,20 @@ wk.add({
 		desc = "Buffer Diagnostics (Trouble)",
 		icon = " ",
 	},
-	{ "<leader>cs", "<cmd>Trouble symbols toggle focus=false<CR>", desc = "Symbols (Trouble)", icon = "󱔁 " },
+	{ "<leader>xs", "<cmd>Trouble symbols toggle focus=false<CR>", desc = "Symbols (Trouble)", icon = "󱔁 " },
 	{
-		"<leader>cl",
+		"<leader>xl",
 		"<cmd>Trouble lsp toggle focus=false<CR>",
 		desc = "LSP Definitions / references / ... ",
 		icon = "󰲅",
 	},
-	{ "<leader>xL", "<cmd>Trouble loclist toggle<CR>", desc = "Location List (Trouble)", icon = " " },
-	{ "<leader>xQ", "<cmd>Trouble qflist toggle<CR>", desc = "Quickfix List (Trouble)", icon = " " },
+	{ "<leader>xl", "<cmd>Trouble loclist toggle<CR>", desc = "Location List (Trouble)", icon = " " },
+	{ "<leader>xq", "<cmd>Trouble qflist toggle<CR>", desc = "Quickfix List (Trouble)", icon = " " },
 	-------------------------------------------------------------
-	{ "<leader>x", group = "Trouble (Diagnostics)", icon = " " },
-	-------------------------------------------------------------
-	{ "<leader>q", group = "Show/Hide Diagnostics", icon = " " },
-	{ "<leader>qs", "<cmd>lua vim.diagnostic.show<CR>", desc = "[S]how diagnostics", icon = "󰈈 " },
-	{ "<leader>qh", "<cmd>lua vim.diagnostic.hide<CR>", desc = "[H]ide diagnostics", icon = "󰈉 " },
+	{ "<leader>qn", "<cmd>tabnew<CR>", desc = "Create New Tab", icon = "󰝜 " },
+	{ "<leader>qw", "<cmd>tabNext<CR>", desc = "Switch to Next Tab", icon = "󰌒 " },
+	{ "<leader>b", "<cmd>terminal<CR>", desc = "Open Terminal in Place", icon = " " },
+	{ "<leader>o", "<cmd>vsplit<CR>", desc = "Split Vertically", icon = " " },
 	-------------------------------------------------------------
 	{
 		"<leader>t",
