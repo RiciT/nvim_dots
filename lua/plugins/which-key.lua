@@ -49,10 +49,11 @@ wk.add({
 	{ "<leader>xl", "<cmd>Trouble loclist toggle<CR>", desc = "Location List (Trouble)", icon = " " },
 	{ "<leader>xq", "<cmd>Trouble qflist toggle<CR>", desc = "Quickfix List (Trouble)", icon = " " },
 	-------------------------------------------------------------
+	{ "<leader>q", group = "Manage tabs", icon = "󰓩 " },
 	{ "<leader>qn", "<cmd>tabnew<CR>", desc = "Create New Tab", icon = "󰝜 " },
 	{ "<leader>qw", "<cmd>tabNext<CR>", desc = "Switch to Next Tab", icon = "󰌒 " },
 	{ "<leader>b", "<cmd>terminal<CR>", desc = "Open Terminal in Place", icon = " " },
-	{ "<leader>o", "<cmd>vsplit<CR>", desc = "Split Vertically", icon = " " },
+	{ "<leader>o", "<cmd>vsplit<CR>", desc = "Split Vertically", icon = "" },
 	-------------------------------------------------------------
 	{
 		"<leader>t",

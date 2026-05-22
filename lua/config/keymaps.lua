@@ -5,7 +5,7 @@ local map = vim.keymap.set
 map("t", "<Esc>", "<C-\\><C-n>")
 map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- Map <A-j>, <A-k>, <A-h>, <A-l> to navigate between windows in any modes
+-- Move between windows
 map({ "n" }, "<C-m>", "<C-w>h")
 map({ "n" }, "<C-n>", "<C-w>j")
 map({ "n" }, "<C-e>", "<C-w>k")
@@ -17,10 +17,10 @@ map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 map("n", "<C-Left>", "<cmd>vertical resize +2<cr>", { desc = "Decrease Window Width" })
 map("n", "<C-Right>", "<cmd>vertical resize -2<cr>", { desc = "Increase Window Width" })
 
-map("n", "<C-E>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
-map("n", "<C-N>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
-map("n", "<C-M>", "<cmd>vertical resize +2<cr>", { desc = "Decrease Window Width" })
-map("n", "<C-I>", "<cmd>vertical resize -2<cr>", { desc = "Increase Window Width" })
+map("n", "g<C-e>", "<cmd>resize +15<cr>", { desc = "Increase Window Height" })
+map("n", "g<C-n>", "<cmd>resize -15<cr>", { desc = "Decrease Window Height" })
+map("n", "g<C-m>", "<cmd>vertical resize +15<cr>", { desc = "Decrease Window Width" })
+map("n", "g<C-i>", "<cmd>vertical resize -15<cr>", { desc = "Increase Window Width" })
 
 -- This part is the accomodate colemak-dh
 -- dont skip over wrapped lines when jumping lines
