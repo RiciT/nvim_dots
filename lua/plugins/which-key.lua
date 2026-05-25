@@ -54,6 +54,8 @@ wk.add({
 	{ "<leader>qw", "<cmd>tabNext<CR>", desc = "Switch to Next Tab", icon = "󰌒 " },
 	{ "<leader>b", "<cmd>terminal<CR>", desc = "Open Terminal in Place", icon = " " },
 	{ "<leader>o", "<cmd>vsplit<CR>", desc = "Split Vertically", icon = "" },
+	{ "<leader>l", "<cmd>lua require('boo').boo()<CR>", desc = "LSP Info", icon = "" },
+	{ "<leader>y", "<cmd>lua vim.diagnostic.open_float()<CR>", desc = "Float Open Diagnostics", icon = "󰉩" },
 	-------------------------------------------------------------
 	{
 		"<leader>t",
@@ -70,5 +72,6 @@ wk.add({
 	-------------------------------------------------------------
 	{ "<leader>s", group = "Search (FzfLua)", icon = " " },
 	{ "<leader>sh", "<cmd>FzfLua files cwd=~<CR>", desc = "Find files in ~", icon = " " },
+	{ "<leader>sk", "<cmd>FzfLua files cwd=/<CR>", desc = "Find files in /", icon = "󰞄 " },
 	{ "<leader>sf", "<cmd>FzfLua files cwd=$CWD<CR>", desc = "Find files in CWD", icon = "󰜐 " },
 })

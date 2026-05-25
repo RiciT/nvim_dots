@@ -13,14 +13,18 @@ cmp.setup({
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
+			vim.snippet.expand(args.body)
 		end,
+	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
 		-- Use <C-Space> to trigger completion menu
 		["<C-Space>"] = cmp.mapping.complete(),
 		-- Confirm selection with Enter
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
-
 		-- Standard Tab / Shift-Tab to navigate the completion menu
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then

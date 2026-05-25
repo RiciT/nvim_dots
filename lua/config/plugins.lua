@@ -14,6 +14,19 @@ add_package("mason-org/mason-lspconfig.nvim")
 require("mason").setup({})
 require("mason-lspconfig").setup({})
 ----------------------------------------------
+-- quick lsp info
+add_package("LukasPietzschmann/boo.nvim")
+require("boo").setup({
+	-- here goes your config :)
+})
+----------------------------------------------
+-- references
+add_package("romus204/referencer.nvim")
+require("referencer").setup({
+	enable = true,
+	virt_text_pos = "eol",
+})
+----------------------------------------------
 -- Fuzzy finder
 add_package("ibhagwan/fzf-lua")
 require("fzf-lua").setup({ fzf_colors = true })
@@ -133,6 +146,12 @@ require("persistence").setup({
 -- Lean support
 add_package("julian/lean.nvim")
 require("lean").setup({ mappings = true })
+----------------------------------------------
+-- Support for the eww config language yuck
+add_package("elkowar/yuck.vim")
+vim.g.yuck_align_multiline_strings = 1
+vim.g.yuck_align_subforms = 1
+vim.g.yuck_lisp_indentation = 1
 ----------------------------------------------
 -- QoL Plugins
 add_package("windwp/nvim-autopairs")
