@@ -4,6 +4,7 @@ local function add_package(pack)
 	_G.TotalPluginCount = _G.TotalPluginCount + 1
 	vim.pack.add({ "https://github.com/" .. pack })
 end
+
 ----------------------------------------------
 -- Quickstart configs for LSP
 add_package("neovim/nvim-lspconfig")
@@ -13,12 +14,6 @@ add_package("mason-org/mason.nvim")
 add_package("mason-org/mason-lspconfig.nvim")
 require("mason").setup({})
 require("mason-lspconfig").setup({})
-----------------------------------------------
--- quick lsp info
-add_package("LukasPietzschmann/boo.nvim")
-require("boo").setup({
-	-- here goes your config :)
-})
 ----------------------------------------------
 -- references
 add_package("romus204/referencer.nvim")

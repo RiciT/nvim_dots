@@ -4,10 +4,6 @@
       "rev": "a62e1083a3cfe8b6b206e7d3d33a51091df25357",
       "src": "https://github.com/L3MON4D3/LuaSnip"
     },
-    "boo.nvim": {
-      "rev": "926b2e92c7e4341ef5e64c7c8f3373768f5e9437",
-      "src": "https://github.com/LukasPietzschmann/boo.nvim"
-    },
     "buffer_manager.nvim": {
       "rev": "a0ac2db39c8bd4a2b6ca897f38c88770f90d9323",
       "src": "https://github.com/j-morano/buffer_manager.nvim"

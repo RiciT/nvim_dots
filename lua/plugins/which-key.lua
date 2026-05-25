@@ -54,7 +54,8 @@ wk.add({
 	{ "<leader>qw", "<cmd>tabNext<CR>", desc = "Switch to Next Tab", icon = "󰌒 " },
 	{ "<leader>b", "<cmd>terminal<CR>", desc = "Open Terminal in Place", icon = " " },
 	{ "<leader>o", "<cmd>vsplit<CR>", desc = "Split Vertically", icon = "" },
-	{ "<leader>l", "<cmd>lua require('boo').boo()<CR>", desc = "LSP Info", icon = "" },
+	{ "<leader>u", "<cmd>lua vim.lsp.buf.hover()<CR>", desc = "LSP Info", icon = "" },
+	{ "<leader>l", "<cmd>lua vim.lsp.buf.signature_help()<CR>", desc = "LSP Signature Help", icon = "" },
 	{ "<leader>y", "<cmd>lua vim.diagnostic.open_float()<CR>", desc = "Float Open Diagnostics", icon = "󰉩" },
 	-------------------------------------------------------------
 	{
