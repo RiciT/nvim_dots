@@ -21,47 +21,6 @@ vim.api.nvim_create_autocmd("Signal", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = {
-		"bash",
-		"regex",
-		"markdown",
-		"markdown-inline",
-		"html",
-		"latex",
-		"rust",
-		"zig",
-		"nim",
-		"c",
-		"cpp",
-		"asm",
-		"awk",
-		"bibtex",
-		"cmake",
-		"dart",
-		"glsl",
-		"ini",
-		"julia",
-		"lua",
-		"make",
-		"matlab",
-		"nasm",
-		"python",
-		"r",
-		"json",
-		"toml",
-		"vim",
-		"yaml",
-		"zsh",
-		"zig",
-		"javascript",
-		"typescript",
-	},
-	callback = function()
-		vim.treesitter.start()
-	end,
-})
-
 -- autowrap in tex files
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "tex",

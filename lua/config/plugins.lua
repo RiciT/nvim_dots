@@ -13,7 +13,6 @@ add_package("mason-org/mason.nvim")
 -- Help Mason implement lsps with nvim
 add_package("mason-org/mason-lspconfig.nvim")
 require("mason").setup({})
-require("mason-lspconfig").setup({})
 ----------------------------------------------
 -- references
 add_package("romus204/referencer.nvim")
@@ -24,7 +23,7 @@ require("referencer").setup({
 ----------------------------------------------
 -- Fuzzy finder
 add_package("ibhagwan/fzf-lua")
-require("fzf-lua").setup({ fzf_colors = true })
+require("fzf-lua").setup({ "telescope", fzf_colors = true })
 ----------------------------------------------
 -- Git integration
 add_package("lewis6991/gitsigns.nvim")
@@ -35,6 +34,7 @@ add_package("folke/flash.nvim")
 ----------------------------------------------
 -- Treesitter
 add_package("nvim-treesitter/nvim-treesitter")
+add_package("nvim-treesitter/nvim-treesitter-textobjects")
 ----------------------------------------------
 -- Dashboard
 add_package("nvimdev/dashboard-nvim")
@@ -92,6 +92,21 @@ add_package("saadparwaiz1/cmp_luasnip")
 -- opt deps
 add_package("hrsh7th/cmp-nvim-lsp")
 add_package("rafamadriz/friendly-snippets")
+
+-- set up handlers for lsps
+-- get the default capabilities from cmp-nvim-lsp
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+require("mason-lspconfig").setup({
+	handlers = {
+		-- this default handler is called for every installed lsp
+		function(server_name)
+			require("lspconfig")[server_name].setup({
+				capabilities = capabilities,
+			})
+		end,
+	},
+})
 ----------------------------------------------
 -- Pretty UI :))
 add_package("folke/noice.nvim")

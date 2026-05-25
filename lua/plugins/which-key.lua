@@ -15,11 +15,14 @@ wk.add({
 	-------------------------------------------------------------
 	{ "<leader>e", "<cmd>Neotree reveal_force_cwd toggle left<CR>", desc = "Toggle CWD NeoTree", icon = " " },
 	-------------------------------------------------------------
-	{ "<leader>k", group = "Telescope", icon = " " },
-	{ "<leader>kr", "<cmd>Telescope oldfiles<CR>", desc = "Recent files", icon = "󰑌 " },
-	{ "<leader>kf", "<cmd>Telescope find_files<CR>", desc = "Find files", icon = " " },
-	{ "<leader>kd", "<cmd>Telescope diagnostics<CR>", desc = "Diagnostics", icon = " " },
-	{ "<leader>kh", "<cmd>Telescope command_history<CR>", desc = "Command History", icon = " " },
+	{ "<leader>k", group = "FzfLua (Search)", icon = " " },
+	{ "<leader>kr", "<cmd>FzfLua oldfiles<CR>", desc = "Recent files", icon = "󰑌 " },
+	{ "<leader>kf", "<cmd>FzfLua files<CR>", desc = "Find files", icon = " " },
+	{ "<leader>kd", "<cmd>FzfLua diagnostics_document<CR>", desc = "Diagnostics", icon = " " },
+	{ "<leader>kh", "<cmd>FzfLua command_history<CR>", desc = "Command History", icon = " " },
+	{ "<leader>kk", "<cmd>FzfLua keymaps<CR>", desc = "Keymaps", icon = " " },
+	{ "<leader>kq", "<cmd>FzfLua files cwd=~<CR>", desc = "Find files in ~", icon = " " },
+	{ "<leader>kw", "<cmd>FzfLua files cwd=/<CR>", desc = "Find files in /", icon = "󰞄 " },
 	-------------------------------------------------------------
 	{ "<leader>c", group = "Conform (Autoformat)", icon = " " },
 	{ "<leader>cf", desc = "Format Selection/File", icon = "󰉦 " },
@@ -57,7 +60,6 @@ wk.add({
 	{ "<leader>u", "<cmd>lua vim.lsp.buf.hover()<CR>", desc = "LSP Info", icon = "" },
 	{ "<leader>l", "<cmd>lua vim.lsp.buf.signature_help()<CR>", desc = "LSP Signature Help", icon = "" },
 	{ "<leader>y", "<cmd>lua vim.diagnostic.open_float()<CR>", desc = "Float Open Diagnostics", icon = "󰉩" },
-	-------------------------------------------------------------
 	{
 		"<leader>t",
 		"<cmd>ToggleTerm direction=horizontal dir=%:p:h<CR>",
@@ -70,9 +72,4 @@ wk.add({
 		desc = "Open Split Terminal",
 		icon = " ",
 	},
-	-------------------------------------------------------------
-	{ "<leader>s", group = "Search (FzfLua)", icon = " " },
-	{ "<leader>sh", "<cmd>FzfLua files cwd=~<CR>", desc = "Find files in ~", icon = " " },
-	{ "<leader>sk", "<cmd>FzfLua files cwd=/<CR>", desc = "Find files in /", icon = "󰞄 " },
-	{ "<leader>sf", "<cmd>FzfLua files cwd=$CWD<CR>", desc = "Find files in CWD", icon = "󰜐 " },
 })

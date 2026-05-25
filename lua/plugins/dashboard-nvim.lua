@@ -33,7 +33,7 @@ require("dashboard").setup({
 				desc = "Recent files",
 				key = "r",
 				key_format = " %s",
-				action = "Telescope oldfiles",
+				action = "FzfLua oldfiles",
 			},
 			{
 				icon = "󰒮 ",
@@ -67,7 +67,7 @@ require("dashboard").setup({
 				desc = "Config",
 				key = "c",
 				key_format = " %s",
-				action = "Telescope find_files cwd=/home/br4mos/.config/nvim/",
+				action = "FzfLua files cwd=/home/br4mos/.config/nvim/",
 			},
 			{
 				icon = "󰰏 ",
