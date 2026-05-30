@@ -8,6 +8,8 @@ luasnip.filetype_extend("markdown", { "html" })
 luasnip.filetype_extend("zsh", { "bash", "sh" })
 luasnip.filetype_extend("bash", { "sh" })
 luasnip.filetype_extend("latex", { "tex" })
+luasnip.filetype_extend("typescript", { "html" })
+luasnip.filetype_extend("javascript", { "html" })
 
 cmp.setup({
 	snippet = {

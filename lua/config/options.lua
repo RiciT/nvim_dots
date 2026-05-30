@@ -24,6 +24,11 @@ vim.o.list = true
 
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.copyindent = true
+vim.o.preserveindent = true
 
 vim.o.confirm = true
 vim.g.have_nerd_font = true
@@ -33,8 +38,6 @@ vim.opt.termguicolors = true
 -- enable concealing for markdown rendering
 vim.o.conceallevel = 2
 
---vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
---vim.wo[0][0].foldmethod = "expr"
 vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 
 vim.o.undofile = true

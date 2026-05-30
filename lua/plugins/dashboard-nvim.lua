@@ -22,6 +22,13 @@ require("dashboard").setup({
 		week_header = { enable = true },
 		center = {
 			{
+				icon = " ",
+				desc = "New File",
+				key = "e",
+				key_format = " %s",
+				action = "ene",
+			},
+			{
 				icon = " ",
 				desc = "Find File",
 				key = "f",
@@ -52,6 +59,13 @@ require("dashboard").setup({
 				action = function()
 					require("persistence").select()
 				end,
+			},
+			{
+				icon = " ",
+				desc = "Live Grep",
+				key = "g",
+				key_format = " %s",
+				action = "FzfLua live_grep",
 			},
 			{
 				icon = " ",
