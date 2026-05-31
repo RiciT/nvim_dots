@@ -2,37 +2,26 @@ local conform = require("conform")
 
 conform.setup({
 	formatters_by_ft = {
-		-- Programming Languages
 		lua = { "stylua" },
 		python = { "isort", "black" },
 		c = { "clang-format" },
 		cpp = { "clang-format" },
-
-		-- Shell scripting
-		bash = { "shfmt" },
-		sh = { "shfmt" },
+		bash = { "shfmt", "beautysh" },
+		sh = { "shfmt", "beautysh" },
 		zsh = { "beautysh" },
-
-		-- LaTeX & Document formatting
 		tex = { "latexindent" },
 		latex = { "latexindent" },
 		bib = { "bibtex-tidy" },
-
-		-- Data Science / Jupyter
 		julia = { "jupytext" },
 		r = { "jupytext" },
-
-		-- Web, Markup & Data
 		javascript = { "prettierd" },
 		typescript = { "ts-standard", "rustywind", "prettierd" },
+		javascriptreact = { "prettierd" },
+		typescriptreact = { "prettierd" },
 		css = { "prettierd" },
 		json = { "prettierd" },
 		markdown = { "prettierd" },
-
-		-- HTML includes rustywind
 		html = { "rustywind", "prettierd" },
-
-		-- Fallback
 		["_"] = { "trim_whitespace" },
 	},
 
@@ -41,6 +30,6 @@ conform.setup({
 		if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
 			return
 		end
-		return { timeout_ms = 500, lsp_format = "fallback" }
+		return { timeout_ms = 500, lsp_format = true }
 	end,
 })

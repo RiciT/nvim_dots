@@ -48,7 +48,7 @@ wk.add({
 	{ "<leader>du", "<cmd>lua require('dapui').toggle()<CR>", desc = "Toggle DAP UI", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>f", group = "TODO", icon = " " },
-	{ "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Find Todo comments", icon = "📝" },
+	{ "<leader>ft", "<cmd>TodoFzfLua<CR>", desc = "Find Todo comments", icon = "📝" },
 	{ "<leader>fb", "<cmd>TodoQuickFix<CR>", desc = "Trouble Todo list", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>x", group = "Trouble (Diagnostics)", icon = " " },

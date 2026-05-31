@@ -14,6 +14,13 @@ add_package("mason-org/mason.nvim")
 add_package("mason-org/mason-lspconfig.nvim")
 require("mason").setup({})
 ----------------------------------------------
+-- Neovim Lua Development
+add_package("folke/lazydev.nvim")
+require("lazydev").setup({})
+----------------------------------------------
+-- Linter integration
+add_package("mfussenegger/nvim-lint")
+----------------------------------------------
 -- references
 add_package("romus204/referencer.nvim")
 require("referencer").setup({
@@ -41,12 +48,8 @@ add_package("nvimdev/dashboard-nvim")
 -- Coloured icons dep for quite a few things
 add_package("nvim-tree/nvim-web-devicons")
 ----------------------------------------------
--- Telescope
-add_package("nvim-telescope/telescope.nvim")
--- deps
+-- lot of packages require it as dep
 add_package("nvim-lua/plenary.nvim")
--- opt deps
-add_package("nvim-telescope/telescope-fzf-native.nvim")
 ----------------------------------------------
 -- VimTeX
 add_package("lervag/vimtex")
@@ -139,10 +142,6 @@ add_package("jay-babu/mason-nvim-dap.nvim") -- bridges Mason with DAP
 ----------------------------------------------
 -- Quick scratchpad terminal for compiling
 add_package("akinsho/toggleterm.nvim")
-----------------------------------------------
--- Neovim Lua Development
-add_package("folke/lazydev.nvim")
-require("lazydev").setup({})
 ----------------------------------------------
 add_package("folke/persistence.nvim")
 require("persistence").setup({

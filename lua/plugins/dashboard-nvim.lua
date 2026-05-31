@@ -72,9 +72,7 @@ require("dashboard").setup({
 				desc = "Projects",
 				key = "p",
 				key_format = " %s",
-				action = function()
-					require("telescope").extensions.projects.projects({})
-				end,
+				action = "FzfProjects",
 			},
 			{
 				icon = " ",
