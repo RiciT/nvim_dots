@@ -38,8 +38,6 @@ vim.opt.termguicolors = true
 -- enable concealing for markdown rendering
 vim.o.conceallevel = 2
 
-vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-
 vim.o.undofile = true
 vim.o.breakindent = true
 

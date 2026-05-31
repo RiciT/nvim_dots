@@ -41,6 +41,29 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- Treesitter expr for all buffers
+vim.api.nvim_create_autocmd("BufEnter", {
+	desc = "Set Treesitter indentexpr for all Buffers",
+	callback = function()
+		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+	end,
+})
+
+-- gitsigns
+vim.api.nvim_create_autocmd("BufEnter", {
+	callback = function()
+		local gs = package.loaded["gitsigns"]
+		if not gs then
+			return
+		end
+		local map = vim.keymap.set
+		map("n", "]h", gs.next_hunk, { desc = "Next hunk" })
+		map("n", "[h", gs.prev_hunk, { desc = "Previous hunk" })
+		map("n", "<leader>gp", gs.preview_hunk, { desc = "Preview hunk" })
+		map("n", "<leader>gb", gs.toggle_current_line_blame, { desc = "Toggle blame" })
+	end,
+})
+
 -- create an isolated group so this cannot be overwritten by other autocommands
 local template_group = vim.api.nvim_create_augroup("TexTemplateDiag", { clear = true })
 
@@ -75,13 +98,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		-- You can search each function in the help page.
 		-- For example :help vim.lsp.buf.hover()
 
-		bufmap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>")
 		bufmap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
 		bufmap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>")
 		bufmap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>")
 		bufmap("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>")
 		bufmap("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>")
-		bufmap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<cr>")
 		bufmap("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>")
 		bufmap("n", "<F6>", "<cmd>lua vim.lsp.buf.code_action()<cr>")
 		bufmap("x", "<F6>", "<cmd>lua vim.lsp.buf.range_code_action()<cr>")

@@ -9,7 +9,6 @@ wk.add({
 	-------------------------------------------------------------
 	-- INDIVIDUAL MAPPINGS
 	{ "<leader>e", "<cmd>Neotree reveal_force_cwd toggle left<CR>", desc = "Toggle CWD NeoTree", icon = " " },
-	{ "<leader>g", "<cmd>LazyGitCurrentFile<CR>", desc = "LazyGit", icon = " " },
 	{ "<leader>o", "<cmd>vsplit<CR>", desc = "Split Vertically", icon = "" },
 	{ "<leader>u", "<cmd>lua vim.lsp.buf.hover()<CR>", desc = "LSP Info", icon = "" },
 	{ "<leader>l", "<cmd>lua vim.lsp.buf.signature_help()<CR>", desc = "LSP Signature Help", icon = "" },
@@ -27,6 +26,12 @@ wk.add({
 		desc = "Open Split Terminal",
 		icon = " ",
 	},
+	{ "<leader> ", "<cmd>b#<CR>", desc = "Switch to previous buffer", icon = "󰒮 " },
+	-------------------------------------------------------------
+	{ "<leader>g", group = "Git", desc = "Git", icon = " " },
+	{ "<leader>gg", "<cmd>LazyGitCurrentFile<CR>", desc = "LazyGit", icon = " " },
+	{ "<leader>gp", icon = " " },
+	{ "<leader>gb", icon = "󰈸 " },
 	-------------------------------------------------------------
 	{ "<leader>k", group = "FzfLua (Search)", icon = " " },
 	{ "<leader>kr", "<cmd>FzfLua oldfiles<CR>", desc = "Recent files", icon = "󰑌 " },
@@ -36,6 +41,9 @@ wk.add({
 	{ "<leader>kk", "<cmd>FzfLua keymaps<CR>", desc = "Keymaps", icon = " " },
 	{ "<leader>kq", "<cmd>FzfLua files cwd=~<CR>", desc = "Find files in ~", icon = " " },
 	{ "<leader>kw", "<cmd>FzfLua files cwd=/<CR>", desc = "Find files in /", icon = "󰞄 " },
+	{ "<leader>ks", "<cmd>FzfLua lsp_document_symbols<CR>", desc = "Document Symbols", icon = "󰫧 " },
+	{ "<leader>kg", "<cmd>FzfLua grep_cword<CR>", desc = "Grep word under cursor", icon = " " },
+	{ "<leader>kc", "<cmd>FzfLua git_commits<CR>", desc = "Git Commits", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>c", group = "Conform (Autoformat)", icon = " " },
 	{ "<leader>cf", desc = "Format Selection/File", icon = "󰉦 " },
@@ -49,7 +57,7 @@ wk.add({
 	-------------------------------------------------------------
 	{ "<leader>f", group = "TODO", icon = " " },
 	{ "<leader>ft", "<cmd>TodoFzfLua<CR>", desc = "Find Todo comments", icon = "📝" },
-	{ "<leader>fb", "<cmd>TodoQuickFix<CR>", desc = "Trouble Todo list", icon = " " },
+	{ "<leader>fb", "<cmd>TodoTrouble<CR>", desc = "Trouble Todo list", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>x", group = "Trouble (Diagnostics)", icon = " " },
 	{ "<leader>xx", "<cmd>Trouble diagnostics toggle<CR>", desc = "Diagnostics (Trouble)", icon = " " },

@@ -1,19 +1,3 @@
-local function get_loaded_plugins_count()
-	local loaded = {}
-	local pack_dir = vim.fn.stdpath("data") .. "/site/pack"
-	for _, path in ipairs(vim.opt.runtimepath:get()) do
-		if path:find(pack_dir, 1, true) then
-			local base_path = path:gsub("/after$", "")
-			loaded[base_path] = true
-		end
-	end
-	local count = 0
-	for _ in pairs(loaded) do
-		count = count + 1
-	end
-	return count
-end
-
 require("dashboard").setup({
 	theme = "doom",
 	shortcut_type = "letter",
@@ -95,10 +79,6 @@ require("dashboard").setup({
 				key_format = " %s",
 				action = "qa",
 			},
-		},
-		footer = {
-			"",
-			"⚡Neovim loaded " .. tostring(get_loaded_plugins_count()) .. " plugins",
 		},
 		vertical_center = true,
 	},

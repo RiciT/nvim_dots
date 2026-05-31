@@ -1,15 +1,11 @@
--- automatically import every lua file in the config dir
-local plugins_dir = vim.fn.stdpath("config") .. "/lua/config"
-if vim.fn.isdirectory(plugins_dir) == 1 then
-	for name, type in vim.fs.dir(plugins_dir) do
-		if type == "file" and name:match("%.lua$") then
-			local module = name:gsub("%.lua$", "")
-			require("config." .. module)
-		end
-	end
-end
+-- import config dir manually to keep the load order deterministic
+require("config.options")
+require("config.plugins")
+require("config.keymaps")
+require("config.autocommands")
+
 -- automatically import every lua file in the plugins dir
-plugins_dir = vim.fn.stdpath("config") .. "/lua/plugins"
+local plugins_dir = vim.fn.stdpath("config") .. "/lua/plugins"
 if vim.fn.isdirectory(plugins_dir) == 1 then
 	for name, type in vim.fs.dir(plugins_dir) do
 		if type == "file" and name:match("%.lua$") then
@@ -37,7 +33,7 @@ vim.api.nvim_create_user_command("PackUpdate", function(info)
 	if #info.fargs ~= 0 then
 		vim.pack.update(info.fargs, { force = info.bang })
 	else
-		local prompt = "Do you want to update ALL packages?"
+		local prompt = "Do you want to update ALL packages? "
 		local choice = vim.fn.confirm(prompt, "&Yes\n&No", 2)
 
 		if choice == 1 then

@@ -19,7 +19,7 @@ lint.linters_by_ft = {
 	typescript = { "ts-standard" },
 }
 
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 	group = vim.api.nvim_create_augroup("Linting", { clear = true }),
 	callback = function()
 		lint.try_lint()

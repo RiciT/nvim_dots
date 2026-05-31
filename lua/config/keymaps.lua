@@ -131,5 +131,3 @@ vim.keymap.set("n", "<leader>cg", function()
 		vim.notify("Autoformat enabled globally", vim.log.levels.INFO, { title = "Conform" })
 	end
 end, { desc = "Toggle autoformat (Global)" })
-
-vim.keymap.set({ "n", "v", "o" }, "<leader>g", ":LazyGit<CR>")

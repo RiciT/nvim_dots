@@ -1,13 +1,19 @@
 -- PLUGINS
-_G.TotalPluginCount = 0
 local function add_package(pack)
-	_G.TotalPluginCount = _G.TotalPluginCount + 1
 	vim.pack.add({ "https://github.com/" .. pack })
 end
 
 ----------------------------------------------
 -- Quickstart configs for LSP
 add_package("neovim/nvim-lspconfig")
+vim.lsp.config("ltex", {
+	settings = {
+		ltex = {
+			language = "en-GB",
+		},
+	},
+})
+
 -- Mason -> Lsp pack manager
 add_package("mason-org/mason.nvim")
 -- Help Mason implement lsps with nvim
@@ -20,13 +26,6 @@ require("lazydev").setup({})
 ----------------------------------------------
 -- Linter integration
 add_package("mfussenegger/nvim-lint")
-----------------------------------------------
--- references
-add_package("romus204/referencer.nvim")
-require("referencer").setup({
-	enable = true,
-	virt_text_pos = "eol",
-})
 ----------------------------------------------
 -- Fuzzy finder
 add_package("ibhagwan/fzf-lua")
@@ -94,7 +93,11 @@ add_package("L3MON4D3/LuaSnip")
 add_package("saadparwaiz1/cmp_luasnip")
 -- opt deps
 add_package("hrsh7th/cmp-nvim-lsp")
+add_package("hrsh7th/cmp-path")
+add_package("hrsh7th/cmp-cmdline")
 add_package("rafamadriz/friendly-snippets")
+-- for vimtex completions
+add_package("hrsh7th/cmp-omni")
 
 -- set up handlers for lsps
 -- get the default capabilities from cmp-nvim-lsp
@@ -121,7 +124,6 @@ add_package("stevearc/conform.nvim")
 ----------------------------------------------
 -- Diagnostics list
 add_package("folke/trouble.nvim")
-require("trouble").setup({})
 ----------------------------------------------
 -- Markdown rendering
 add_package("MeanderingProgrammer/render-markdown.nvim")

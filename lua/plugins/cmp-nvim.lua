@@ -51,7 +51,37 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
+		{ name = "omni" },
 	}, {
 		{ name = "buffer" },
+	}),
+})
+
+-- path completion
+cmp.setup.filetype({ "lua", "python", "sh", "bash", "zsh" }, {
+	sources = cmp.config.sources({
+
+		{ name = "nvim_lsp" },
+		{ name = "luasnip" },
+		{ name = "omni" },
+	}, {
+		{ name = "buffer" },
+	}),
+})
+
+-- cmdline completion for /
+cmp.setup.cmdline("/", {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = { { name = "buffer" } },
+})
+
+-- cmdline completion for : commands
+cmp.setup.cmdline(":", {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = "path" },
+	}, {
+
+		{ name = "cmdline" },
 	}),
 })

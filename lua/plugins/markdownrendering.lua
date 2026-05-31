@@ -1,5 +1,5 @@
 require("render-markdown").setup({
-	file_types = { "markdown", "lua", "python", "c", "cpp", "zig", "nim" },
+	file_types = { "markdown" },
 	completions = { lsp = { enabled = true } },
 	heading = { enabled = true },
 	sign = { enabled = true },
