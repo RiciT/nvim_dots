@@ -8,7 +8,7 @@ require("dashboard").setup({
 			{
 				icon = " ",
 				desc = "New File",
-				key = "e",
+				key = "t",
 				key_format = " %s",
 				action = "ene",
 			},

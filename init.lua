@@ -5,6 +5,7 @@ require("config.keymaps")
 require("config.autocommands")
 
 -- load it separately at the start so that the startup time feels shorter
+-- this way time until dashboard appears is around 100ms which i think is fine
 require("plugins.dashboard-nvim")
 
 -- automatically import every lua file in the plugins dir

@@ -27,6 +27,7 @@ wk.add({
 		icon = " ",
 	},
 	{ "<leader> ", "<cmd>b#<CR>", desc = "Switch to previous buffer", icon = "󰒮 " },
+	{ "<leader>h", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>g", group = "Git", desc = "Git", icon = " " },
 	{ "<leader>gg", "<cmd>LazyGitCurrentFile<CR>", desc = "LazyGit", icon = " " },
