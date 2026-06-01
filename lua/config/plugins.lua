@@ -13,7 +13,6 @@ vim.lsp.config("ltex", {
 		},
 	},
 })
-
 -- Mason -> Lsp pack manager
 add_package("mason-org/mason.nvim")
 -- Help Mason implement lsps with nvim
@@ -156,7 +155,13 @@ require("persistence").setup({
 ----------------------------------------------
 -- Lean support
 add_package("julian/lean.nvim")
-require("lean").setup({ mappings = true })
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "lean",
+	once = true,
+	callback = function()
+		require("lean").setup({ mappings = true })
+	end,
+})
 ----------------------------------------------
 -- Support for the eww config language yuck
 add_package("elkowar/yuck.vim")

@@ -53,7 +53,7 @@ wk.add({
 	{ "<leader>d", group = "Debug", icon = "󰃤 " },
 	{ "<leader>db", desc = "Toggle Breakpoint", icon = "󱈸 " },
 	{ "<leader>dc", desc = "Clear Breakpoint", icon = " " },
-	{ "<leader>du", "<cmd>lua require('dapui').toggle()<CR>", desc = "Toggle DAP UI", icon = " " },
+	{ "<leader>du", desc = "Toggle DAP UI", icon = " " },
 	-------------------------------------------------------------
 	{ "<leader>f", group = "TODO", icon = " " },
 	{ "<leader>ft", "<cmd>TodoFzfLua<CR>", desc = "Find Todo comments", icon = "📝" },

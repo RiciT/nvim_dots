@@ -4,13 +4,20 @@ require("config.plugins")
 require("config.keymaps")
 require("config.autocommands")
 
+-- load it separately at the start so that the startup time feels shorter
+require("plugins.dashboard-nvim")
+
 -- automatically import every lua file in the plugins dir
 local plugins_dir = vim.fn.stdpath("config") .. "/lua/plugins"
 if vim.fn.isdirectory(plugins_dir) == 1 then
 	for name, type in vim.fs.dir(plugins_dir) do
 		if type == "file" and name:match("%.lua$") then
 			local module = name:gsub("%.lua$", "")
+			if module == "dashboard-nvim" then
+				goto continue
+			end
 			require("plugins." .. module)
+			::continue::
 		end
 	end
 end
