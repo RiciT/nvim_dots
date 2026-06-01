@@ -21,25 +21,22 @@ require("mason").setup({})
 ----------------------------------------------
 -- Neovim Lua Development
 add_package("folke/lazydev.nvim")
-require("lazydev").setup({})
 ----------------------------------------------
 -- Linter integration
 add_package("mfussenegger/nvim-lint")
 ----------------------------------------------
 -- Fuzzy finder
 add_package("ibhagwan/fzf-lua")
-require("fzf-lua").setup({ "telescope", fzf_colors = true })
 ----------------------------------------------
 -- Git integration
 add_package("lewis6991/gitsigns.nvim")
-require("gitsigns").setup({})
 ----------------------------------------------
 -- Advanced search highlighting
 add_package("folke/flash.nvim")
 ----------------------------------------------
 -- Treesitter
 add_package("nvim-treesitter/nvim-treesitter")
-add_package("nvim-treesitter/nvim-treesitter-textobjects")
+add_package("nvim-treesitter/nvim-treesitter-textobjects") --this does not work currently
 ----------------------------------------------
 -- Dashboard
 add_package("nvimdev/dashboard-nvim")
@@ -64,7 +61,6 @@ add_package("j-morano/buffer_manager.nvim")
 ----------------------------------------------
 -- Bufferline
 add_package("akinsho/bufferline.nvim")
-require("bufferline").setup({})
 ----------------------------------------------
 -- Neo-tree explorer
 add_package("nvim-neo-tree/neo-tree.nvim")
@@ -129,7 +125,6 @@ add_package("MeanderingProgrammer/render-markdown.nvim")
 ----------------------------------------------
 -- Status line
 add_package("nvim-lualine/lualine.nvim")
-require("lualine").setup({})
 ----------------------------------------------
 -- LazyGit integration
 add_package("kdheepak/lazygit.nvim")
@@ -144,35 +139,17 @@ add_package("jay-babu/mason-nvim-dap.nvim") -- bridges Mason with DAP
 -- Quick scratchpad terminal for compiling
 add_package("akinsho/toggleterm.nvim")
 ----------------------------------------------
+-- Sessions
 add_package("folke/persistence.nvim")
-require("persistence").setup({
-	dir = vim.fn.stdpath("state") .. "/sessions/", -- directory where session files are saved
-	-- minimum number of file buffers that need to be open to save
-	-- Set to 0 to always save
-	need = 1,
-	branch = true, -- use git branch to save session
-})
 ----------------------------------------------
 -- Lean support
 add_package("julian/lean.nvim")
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "lean",
-	once = true,
-	callback = function()
-		require("lean").setup({ mappings = true })
-	end,
-})
 ----------------------------------------------
 -- Support for the eww config language yuck
 add_package("elkowar/yuck.vim")
-vim.g.yuck_align_multiline_strings = 1
-vim.g.yuck_align_subforms = 1
-vim.g.yuck_lisp_indentation = 1
 ----------------------------------------------
 -- QoL Plugins
 add_package("windwp/nvim-autopairs")
 add_package("kylechui/nvim-surround")
-require("nvim-surround").setup({})
 add_package("folke/todo-comments.nvim")
-require("todo-comments").setup({})
 add_package("ahmedkhalf/project.nvim")
