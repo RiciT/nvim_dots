@@ -24,24 +24,31 @@ map("n", "g<C-i>", "<cmd>vertical resize -15<cr>", { desc = "Increase Window Wid
 
 -- This part is the accomodate colemak-dh
 -- dont skip over wrapped lines when jumping lines
+-- also remap H and L to 0 and $
+-- and fix the uppercase mappings
 local modes = { "n", "v", "o" }
 
 map(modes, "m", "h")
+map(modes, "M", "0")
 map(modes, "j", "m")
 
 map(modes, "n", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+map(modes, "N", "H")
 map(modes, "h", "n")
+map(modes, "H", "N")
 
 map(modes, "e", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+map(modes, "E", "K")
 map(modes, "k", "e")
+map(modes, "K", "E")
 
 map(modes, "i", "l")
+map(modes, "I", "$")
 map(modes, "l", "i")
-
--- Fix going backwards through search
-map(modes, "H", "N")
 map(modes, "L", "I")
-map(modes, "K", "E")
+
+-- map oien to esc
+map({ "i" }, "oien", "<Esc>")
 
 -- move selection up and down
 map("v", "E", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })

@@ -3,6 +3,9 @@ local function add_package(pack)
 	vim.pack.add({ "https://github.com/" .. pack })
 end
 
+-- the mason, mason-lspconfig, cmp-nvim-lsp -> requires are needed here since we have to guarantee
+-- they run in the right order
+
 ----------------------------------------------
 -- Quickstart configs for LSP
 add_package("neovim/nvim-lspconfig")
