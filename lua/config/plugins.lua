@@ -151,6 +151,9 @@ add_package("julian/lean.nvim")
 -- Support for the eww config language yuck
 add_package("elkowar/yuck.vim")
 ----------------------------------------------
+-- Autopair tags
+add_package("windwp/nvim-ts-autotag")
+----------------------------------------------
 -- QoL Plugins
 add_package("windwp/nvim-autopairs")
 add_package("kylechui/nvim-surround")

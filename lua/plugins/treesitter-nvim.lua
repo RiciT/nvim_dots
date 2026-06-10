@@ -34,6 +34,8 @@ require("nvim-treesitter").setup({
 		"zsh",
 		"javascript",
 		"typescript",
+		"tsx",
+		"jsx",
 	},
 	highlight = {
 		enable = true,

@@ -64,3 +64,8 @@ vim.opt.listchars:append({
 	tab = "│ ",
 	leadmultispace = "│   ",
 })
+
+-- spellfile
+vim.o.spelllang = "en_us,en_gb,hu"
+vim.o.spellfile = "/home/br4mos/.config/nvim/lua/spell/en.utf-8.add"
+-- zg add to spellfile, zw remove -> [s next misspell, ]s prev misspell
