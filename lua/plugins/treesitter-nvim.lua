@@ -36,6 +36,7 @@ require("nvim-treesitter").setup({
 		"typescript",
 		"tsx",
 		"jsx",
+		"go",
 	},
 	highlight = {
 		enable = true,

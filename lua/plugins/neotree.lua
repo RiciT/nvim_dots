@@ -194,9 +194,9 @@ require("neo-tree").setup({
 				-- ['<key>'] = function(state) ... end,
 			},
 			fuzzy_finder_mappings = { -- define keymaps for filter popup window in fuzzy_finder_mode
-				["<down>"] = "move_cursor_down",
+				["n"] = "move_cursor_down",
 				["<C-n>"] = "move_cursor_down",
-				["<up>"] = "move_cursor_up",
+				["e"] = "move_cursor_up",
 				["<C-p>"] = "move_cursor_up",
 				["<esc>"] = "close",
 				["<S-CR>"] = "close_keep_filter",

@@ -109,6 +109,21 @@ require("mason-lspconfig").setup({
 				capabilities = capabilities,
 			})
 		end,
+
+		["pylsp"] = function()
+			require("lspconfig").pylsp.setup({
+				capabilities = capabilities,
+				settings = {
+					pylsp = {
+						plugins = {
+							pycodestyle = {
+								ignore = { "E501" }, -- ignore "line too long" warns
+							},
+						},
+					},
+				},
+			})
+		end,
 	},
 })
 ----------------------------------------------
@@ -159,3 +174,5 @@ add_package("windwp/nvim-autopairs")
 add_package("kylechui/nvim-surround")
 add_package("folke/todo-comments.nvim")
 add_package("ahmedkhalf/project.nvim")
+add_package("kevinhwang91/promise-async")
+add_package("kevinhwang91/nvim-ufo")

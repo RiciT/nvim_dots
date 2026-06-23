@@ -28,6 +28,7 @@ wk.add({
 	},
 	{ "<leader> ", "<cmd>b#<CR>", desc = "Switch to previous buffer", icon = "󰒮 " },
 	{ "<leader>h", icon = " " },
+	{ "<leader>;", "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Code Action", icon = "a" },
 	-------------------------------------------------------------
 	{ "<leader>g", group = "Git", desc = "Git", icon = " " },
 	{ "<leader>gg", "<cmd>LazyGitCurrentFile<CR>", desc = "LazyGit", icon = " " },
